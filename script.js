@@ -57,3 +57,21 @@ toggleButtons.forEach(function(button) {
   });
 });
 });
+
+$(document).ready(function() {
+    // When a navigation link is clicked
+    $('nav a').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        var link = $(this).attr('href'); // Get the href attribute
+        
+        // Hide existing logo if visible
+        $('.logo').fadeOut('fast', function() {
+            // Load content or perform other actions
+            window.location.href = link; // Redirect to the clicked link
+        });
+    });
+
+    // Optional: Show logo on page load with a delay
+    $('.logo').delay(500).fadeIn('slow'); // Adjust timing as needed
+});
+
