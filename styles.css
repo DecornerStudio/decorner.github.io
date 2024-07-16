@@ -167,3 +167,11 @@ footer {
   display: none;
 }
 
+.logo {
+    display: none; /* Initially hide the logo */
+    position: fixed; /* Positioning for pop-up effect */
+    top: 50%; /* Adjust as per your design */
+    left: 50%; /* Adjust as per your design */
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it appears on top */
+}
