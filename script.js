@@ -56,21 +56,20 @@ toggleButtons.forEach(function(button) {
     toggleHiddenContent(contentId);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Add a class to the logo to trigger the animation
+  const logo = document.querySelector('.logo h1');
+  logo.classList.add('fadein');
+
+  // Add a class to the nav to trigger the animation
+  const nav = document.querySelector('.nav');
+  nav.classList.add('slidein');
+
+  // Add a class to the content to trigger the animation
+  const content = document.querySelector('.content');
+  content.classList.add('fadein');
 });
-
-$(document).ready(function() {
-    // When a navigation link is clicked
-    $('nav a').click(function(e) {
-        e.preventDefault(); // Prevent default link behavior
-        var link = $(this).attr('href'); // Get the href attribute
-        
-        // Hide existing logo if visible
-        $('.logo').fadeOut('fast', function() {
-            // Load content or perform other actions
-            window.location.href = link; // Redirect to the clicked link
-        });
-    });
-
     // Optional: Show logo on page load with a delay
     $('.logo').delay(500).fadeIn('slow'); // Adjust timing as needed
 });
