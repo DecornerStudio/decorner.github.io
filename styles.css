@@ -167,11 +167,35 @@ footer {
   display: none;
 }
 
-.logo {
-    display: none; /* Initially hide the logo */
-    position: fixed; /* Positioning for pop-up effect */
-    top: 50%; /* Adjust as per your design */
-    left: 50%; /* Adjust as per your design */
-    transform: translate(-50%, -50%);
-    z-index: 9999; /* Ensure it appears on top */
+/* Animation */
+.logo h1 {
+  animation: fadein 2s ease;
+}
+
+.nav {
+  animation: slidein 1s ease;
+}
+
+.content {
+  animation: fadein 1.5s ease;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
