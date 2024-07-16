@@ -166,36 +166,3 @@ footer {
 .hidden-content {
   display: none;
 }
-
-/* Animation */
-.logo h1 {
-  animation: fadein 2s ease;
-}
-
-.nav {
-  animation: slidein 1s ease;
-}
-
-.content {
-  animation: fadein 1.5s ease;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slidein {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
